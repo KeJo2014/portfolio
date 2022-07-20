@@ -26,11 +26,12 @@ var contactForm = {
             alertify.message(msg2);
 
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", path + "?auth=GJKISU8676ztzUBIZGTIGG899IOUOT&" + contactForm.$form.serialize());
+            xhr.open("GET", "https://lujoso.ddns.net/services/5646364hfr78fh38h8fh86736/mailer/?auth=GJKISU8676ztzUBIZGTIGG899IOUOT&" + contactForm.$form.serialize());
 
             xhr.addEventListener('load', function () {
                 alert(xhr.responseText);
                 if (xhr.responseText == "int(1)") {
+                    jQuery('#submit-form').removeClass('disabled');
                     alertify.success(msg3);
                 }
             });
@@ -50,13 +51,8 @@ var contactForm = {
             //contactForm.$form.find('input[type="text"], input[type="email"], textarea').val('');
 
 
-            jQuery('#submit-form').removeClass('disabled');
-            jQuery.get("https://lujoso.ddns.net/services/5646364hfr78fh38h8fh86736/mailer?auth=GJKISU8676ztzUBIZGTIGG899IOUOT&name=Jonas&email=onas%40keller.de&subject=Doo&msg=Doofi&ip=217.252.156.113", function (data) {
-
-
-
-
-            })
+            
+            
 
         }
 
