@@ -21,7 +21,7 @@ function findGetParameter(parameterName) {
 function loadPagePiece(param){
         console.log(param)
         //window.location.hash = param;
-        window.history.pushState("","",window.location.origin+"/?page="+param);
+        window.history.pushState("","",window.location.origin+window.location.pathname+"?page="+param);
         //location.href = window.location.origin+"/?page="+param;
         element = document.getElementById(param);
         console.log(element)
